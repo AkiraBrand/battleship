@@ -11,9 +11,9 @@ class SpaceTest<Minitest::Test
     assert_instance_of Space, space
   end
 
-  def test_it_starts_as_an_hash_with_keys_of_board_location_but_default_value_of_empty
+  def test_it_all_spaces_start_empty
     space = Space.new
-    assert_equal " ", space.starting_spaces["A1"]
+    assert_equal " ", space.status
   end
 
 end

@@ -1,11 +1,61 @@
 class Board
 
-attr_reader :board
+attr_reader :board,
+            :player
 
-  def board
 
-   @top_border = "==========\n"
-   
+  def initialize
+
+    @spaces = [[Space.new("A1"), Space.new("A2"), etc][b's][c][d]
+    @status = @spaces.map do |space|
+      space.status
+    end
+
+  end
+
+
+
+  def make_the_board
+    #this will be string interpolation in here
+    #go to status array position zero
+    #go to status array position two
+    "===========
+    .1 2 3 4
+    A
+    B
+    C
+    D
+    ==========="
+  end
+
+end
+    # @player = player_object
+
+   # @top_border = [==========\n]
+   # @rows_of_numbers = [. 1 2 3 4]
+   # @first_row = ["A", Space.emptys["A1"], Space.emptys["A2"]]
+   #
+   # @ships = Ship.new(units)
+
+   # @emptys = {
+   #               "A1" => Space.new,
+   #               "A2" => " ",
+   #               "A3" => " ",
+   #               "A4" => " ",
+   #               "B1" => " ",
+   #               "B2" => " ",
+   #               "B3" => " ",
+   #               "B4" => " ",
+   #               "C1" => " ",
+   #               "C2" => " ",
+   #               "C3" => " ",
+   #               "C4" => " ",
+   #               "D1" => " ",
+   #               "D2" => " ",
+   #               "D3" => " ",
+   #               "D4" => " "
+   #               }
+
    # # @npc_a_row          = {}
    # # @npc_b_row          = {}
    # # @npc_c_row          = {}
@@ -28,6 +78,3 @@ attr_reader :board
    # @player_c_line      = ""
    # @player_d_line      = ""
    # @bottom_border      = "=========="
-  end
-
-end
